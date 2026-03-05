@@ -98,6 +98,33 @@
   nav ul li a:hover { color: var(--green); }
 
   nav ul li.has-dropdown > a::after {
+    .has-dropdown { position: relative; }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #FFFFFF;
+      border: 1px solid #E8E0D4;
+      border-top: 2px solid #3D6B4F;
+      min-width: 180px;
+      z-index: 200;
+    }
+    .has-dropdown:hover .dropdown { display: block; }
+    .dropdown li { list-style: none; }
+    .dropdown li a {
+      display: block;
+      padding: 12px 20px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1C1C1A;
+      text-decoration: none;
+      border-bottom: 1px solid #E8E0D4;
+      transition: background 0.15s, color 0.15s;
+    }
+    .dropdown li:last-child a { border-bottom: none; }
+    .dropdown li a:hover { background: #F7F4EF; color: #3D6B4F; }
     content: ' ↓';
     font-size: 9px;
   }
@@ -390,6 +417,11 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li class="has-dropdown"><a href="#" onclick="return false;">Shop</a>
+        <ul class="dropdown">
+          <li><a href="shop-adults.html">Adults</a></li>
+          <li><a href="shop-kids.html">Kids &amp; Baby</a></li>
+          <li><a href="shop-stickers.html">Stickers</a></li>
+        </ul>
       <li><a href="events.html">Events</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="find-in-store.html">Find in Store</a></li>
