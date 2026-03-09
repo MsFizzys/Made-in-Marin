@@ -3,324 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tie Dye — Made in Marin</title>
+<title>Tie Dye | Made in Marin&reg; &mdash; Hand-Dyed Marin County Clothing</title>
+<meta name="description" content="Shop Made in Marin hand-dyed tie dye clothing &mdash; tees, hoodies, and onesies for baby, toddler, kids, and adults. One of a kind designs made in Marin County, CA.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://madeinmarin.org/shop-tiedye.html">
+<meta property="og:title" content="Tie Dye | Made in Marin&reg;">
+<meta property="og:description" content="Hand-dyed tie dye clothing for the whole family. One of a kind designs from Marin County, CA.">
+<meta property="og:url" content="https://madeinmarin.org/shop-tiedye.html">
+<meta property="og:image" content="https://madeinmarin.org/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --cream:#F7F4EF; --sand:#E8E0D4; --dark:#1C1C1A; --mid:#5A5750; --green:#3D6B4F; --green-light:#4E8A65; --white:#FFFFFF; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:var(--cream); color:var(--dark); font-family:'Montserrat',sans-serif; font-weight:300; }
-
-  header { background:var(--white); border-bottom:1px solid var(--sand); position:sticky; top:0; z-index:100; }
+  :root {
+    --cream:#F7F4EF; --sand:#E8E0D4; --dark:#1C1C1A; --mid:#5A5750;
+    --seafoam:#BDD4CF; --seafoam-light:#A8C5BF; --seafoam-pale:#EBF4F2; --white:#FFFFFF;
+    --td-pink:#E8829A; --td-purple:#9B7EC8; --td-blue:#6AADCF; --td-green:#7EC898; --td-yellow:#E8D060; --td-darkblue:#3A5A8C; --td-black:#1C1C2E;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:#fdf8ff; color:var(--td-black); font-family:'Montserrat',sans-serif; font-weight:300; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  header { background:rgba(255,255,255,0.93); border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--td-pink),var(--td-purple),var(--td-blue),var(--td-green),var(--td-yellow)) 1; position:sticky; top:0; z-index:100; backdrop-filter:blur(8px); box-shadow:0 1px 8px rgba(0,0,0,0.06); }
   .header-top { display:flex; align-items:center; justify-content:space-between; padding:14px 40px; }
   .header-logo { display:flex; align-items:center; text-decoration:none; }
-  .header-actions { display:flex; align-items:center; gap:18px; }
-  .cart-icon { font-size:13px; letter-spacing:0.08em; font-weight:500; color:var(--dark); text-decoration:none; border:1px solid var(--dark); padding:5px 12px; }
-  nav { border-top:1px solid var(--sand); padding:0 40px; }
+  .header-right { display:flex; align-items:center; gap:16px; }
+  .cart-icon { font-size:14px; letter-spacing:0.08em; font-weight:500; color:var(--td-darkblue); text-decoration:none; border:2px solid var(--td-purple); padding:7px 16px; transition:all 0.2s; min-height:44px; display:flex; align-items:center; }
+  .cart-icon:hover { background:var(--td-purple); color:var(--white); }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; min-width:44px; min-height:44px; align-items:center; justify-content:center; }
+  .hamburger span { display:block; width:24px; height:2px; background:var(--td-darkblue); transition:all 0.3s; border-radius:1px; }
+  .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity:0; }
+  .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  nav { border-top:1px solid rgba(155,126,200,0.2); padding:0 40px; }
   nav ul { list-style:none; display:flex; }
-  nav ul li a { display:block; padding:11px 22px 11px 0; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; color:var(--mid); text-decoration:none; transition:color 0.2s; }
-  nav ul li a:hover, nav ul li.active > a { color:var(--green); }
+  nav ul li a { display:flex; align-items:center; padding:13px 22px 13px 0; font-size:13px; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; color:var(--mid); text-decoration:none; transition:color 0.2s; min-height:44px; }
+  nav ul li a:hover, nav ul li.active > a { color:var(--td-purple); text-decoration:underline; text-underline-offset:4px; }
   .has-dropdown { position:relative; }
   .has-dropdown > a::after { content:' ↓'; font-size:9px; }
   .has-dropdown .dropdown { display:none; }
   .has-dropdown:hover .dropdown { display:block; }
-  .dropdown { position:absolute; top:100%; left:0; background:var(--white); border:1px solid var(--sand); border-top:2px solid var(--green); min-width:180px; z-index:200; }
+  .dropdown { position:absolute; top:100%; left:0; background:var(--white); border:1px solid var(--sand); border-top:3px solid var(--td-purple); min-width:190px; z-index:200; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
   .dropdown li { list-style:none; }
-  .dropdown li a { display:block; padding:12px 20px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--dark); text-decoration:none; border-bottom:1px solid var(--sand); transition:background 0.15s,color 0.15s; }
+  .dropdown li a { display:flex; align-items:center; padding:13px 20px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--dark); text-decoration:none; border-bottom:1px solid var(--sand); transition:background 0.15s; min-height:44px; }
   .dropdown li:last-child a { border-bottom:none; }
-  .dropdown li a:hover { background:var(--cream); color:var(--green); }
-  .dropdown li.active a { color:var(--green); font-weight:500; }
-
-  /* PAGE TITLE */
-  .page-title { text-align:center; padding:48px 20px 32px; border-bottom:1px solid var(--sand); }
-  .breadcrumb { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); margin-bottom:10px; }
-  .breadcrumb a { color:var(--mid); text-decoration:none; }
-  .breadcrumb a:hover { color:var(--green); }
-  .page-title h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,5vw,44px); font-weight:300; }
-
-  /* STICKY FILTER BAR */
-  .filter-bar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:16px 40px; background:var(--white); border-bottom:1px solid var(--sand); position:sticky; top:73px; z-index:90; }
-  .filter-group { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-  .filter-label { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--mid); }
-  .filter-btn { background:none; border:1px solid var(--sand); padding:7px 16px; font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); cursor:pointer; transition:all 0.2s; }
-  .filter-btn:hover, .filter-btn.active { background:var(--green); border-color:var(--green); color:var(--white); }
+  .dropdown li a:hover { background:#f5f0ff; color:var(--td-purple); }
+  .dropdown li.active a { font-weight:600; color:var(--td-purple); }
+  .td-hero { position:relative; overflow:hidden; padding:64px 40px 56px; text-align:center; background:linear-gradient(160deg,#fce4ec 0%,#f3e5f5 18%,#e3f2fd 36%,#e8f5e9 54%,#fffde7 72%,#e8eaf6 90%); }
+  .td-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 400px 300px at 10% 20%,rgba(232,130,154,0.35) 0%,transparent 70%),radial-gradient(ellipse 500px 400px at 85% 80%,rgba(155,126,200,0.3) 0%,transparent 65%),radial-gradient(ellipse 350px 250px at 60% 10%,rgba(106,173,207,0.3) 0%,transparent 60%),radial-gradient(ellipse 300px 350px at 20% 85%,rgba(126,200,152,0.3) 0%,transparent 60%),radial-gradient(ellipse 200px 200px at 90% 15%,rgba(232,208,96,0.4) 0%,transparent 55%); pointer-events:none; }
+  .td-hero-breadcrumb { font-size:13px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(58,90,140,0.7); margin-bottom:16px; position:relative; }
+  .td-hero-breadcrumb a { color:rgba(58,90,140,0.7); text-decoration:none; }
+  .td-hero-breadcrumb a:hover { color:var(--td-darkblue); }
+  .td-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(40px,7vw,72px); font-weight:300; position:relative; background:linear-gradient(135deg,var(--td-pink) 0%,var(--td-purple) 30%,var(--td-blue) 60%,var(--td-green) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:12px; line-height:1.1; }
+  .td-hero-sub { font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:var(--td-darkblue); opacity:0.7; position:relative; }
+  .filter-bar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:16px 40px; background:rgba(255,255,255,0.95); border-bottom:1px solid rgba(155,126,200,0.2); position:sticky; top:73px; z-index:90; backdrop-filter:blur(6px); }
+  .filter-group { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .filter-label { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--mid); }
+  .filter-btn { background:none; border:2px solid var(--sand); padding:9px 16px; font-family:'Montserrat',sans-serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mid); cursor:pointer; transition:all 0.2s; min-height:44px; }
+  .filter-btn[data-filter="all"]:hover,.filter-btn[data-filter="all"].active { background:var(--td-darkblue); border-color:var(--td-darkblue); color:var(--white); }
+  .filter-btn[data-filter="tee"]:hover,.filter-btn[data-filter="tee"].active { background:var(--td-pink); border-color:var(--td-pink); color:var(--white); }
+  .filter-btn[data-filter="hoodie"]:hover,.filter-btn[data-filter="hoodie"].active { background:var(--td-purple); border-color:var(--td-purple); color:var(--white); }
+  .filter-btn[data-filter="onesie"]:hover,.filter-btn[data-filter="onesie"].active { background:var(--td-green); border-color:var(--td-green); color:var(--white); }
   .jump-links { display:flex; gap:16px; }
-  .jump-link { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color 0.2s; }
-  .jump-link:hover { color:var(--green); }
-
-  /* AGE SECTIONS */
+  .jump-link { font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color 0.2s; min-height:44px; display:flex; align-items:center; }
+  .jump-link:hover { color:var(--td-purple); }
   .shop-main { max-width:1200px; margin:0 auto; padding:0 40px 80px; }
-
-  .age-section { padding-top:56px; }
+  .age-section { padding-top:60px; }
   .age-section.hidden { display:none; }
-
-  .section-header { display:flex; align-items:center; gap:24px; margin-bottom:32px; padding-bottom:16px; border-bottom:2px solid var(--green); }
-  .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(24px,4vw,36px); font-weight:300; }
-  .section-count { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); }
-
-  /* PRODUCT GRID */
+  .section-header { display:flex; align-items:center; gap:24px; margin-bottom:32px; padding-bottom:16px; border-bottom:3px solid transparent; }
+  #section-baby .section-header { border-bottom-color:var(--td-pink); }
+  #section-toddler .section-header { border-bottom-color:var(--td-blue); }
+  #section-kids .section-header { border-bottom-color:var(--td-green); }
+  #section-adults .section-header { border-bottom-color:var(--td-purple); }
+  .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(26px,4vw,40px); font-weight:300; }
+  #section-baby .section-title { color:var(--td-pink); }
+  #section-toddler .section-title { color:var(--td-darkblue); }
+  #section-kids .section-title { color:#4a7a5c; }
+  #section-adults .section-title { color:var(--td-purple); }
+  .section-count { font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); }
   .product-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px 24px; }
-  .product-card { cursor:pointer; text-decoration:none; color:inherit; display:block; }
+  .product-card { text-decoration:none; color:inherit; display:block; }
   .product-card.hidden { display:none; }
-  .product-img { width:100%; aspect-ratio:3/4; background:var(--sand); display:flex; align-items:center; justify-content:center; margin-bottom:14px; overflow:hidden; position:relative; }
-  .product-img img { width:100%; height:100%; object-fit:cover; display:block; }
-  .product-img-placeholder { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); opacity:0.4; }
-  .product-badge { position:absolute; top:12px; left:12px; background:var(--green); color:var(--white); font-size:9px; letter-spacing:0.15em; text-transform:uppercase; padding:4px 8px; font-weight:500; }
-  .product-overlay { position:absolute; inset:0; background:rgba(28,28,26,0.04); opacity:0; transition:opacity 0.2s; display:flex; align-items:flex-end; justify-content:center; padding-bottom:20px; }
+  .product-card:nth-child(3n+1) .product-img { border-top:3px solid var(--td-pink); }
+  .product-card:nth-child(3n+2) .product-img { border-top:3px solid var(--td-purple); }
+  .product-card:nth-child(3n) .product-img { border-top:3px solid var(--td-blue); }
+  .product-img { width:100%; aspect-ratio:3/4; background:linear-gradient(135deg,#fce4ec 0%,#e8eaf6 100%); display:flex; align-items:center; justify-content:center; margin-bottom:14px; overflow:hidden; position:relative; }
+  .product-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
+  .product-card:hover .product-img img { transform:scale(1.03); }
+  .product-img-placeholder { font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); opacity:0.5; }
+  .product-overlay { position:absolute; inset:0; opacity:0; transition:opacity 0.2s; display:flex; align-items:flex-end; justify-content:center; padding-bottom:20px; }
   .product-card:hover .product-overlay { opacity:1; }
-  .view-btn { background:var(--dark); color:var(--white); font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; padding:10px 24px; border:none; cursor:pointer; font-weight:500; }
-  .product-category { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--green); margin-bottom:4px; }
-  .product-name { font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:var(--dark); margin-bottom:6px; }
-  .product-price { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--mid); }
-
-  .section-empty { display:none; font-size:12px; letter-spacing:0.1em; color:var(--mid); padding:20px 0; }
-
-  /* FOOTER */
-  footer { background:var(--dark); padding:36px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+  .view-btn { background:var(--td-purple); color:var(--white); font-family:'Montserrat',sans-serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; padding:12px 24px; border:none; cursor:pointer; font-weight:500; }
+  .product-category { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:4px; }
+  #section-baby .product-category { color:var(--td-pink); }
+  #section-toddler .product-category { color:var(--td-blue); }
+  #section-kids .product-category { color:#4a7a5c; }
+  #section-adults .product-category { color:var(--td-purple); }
+  .product-name { font-size:13px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:var(--td-black); margin-bottom:6px; }
+  .product-price { font-family:'Cormorant Garamond',serif; font-size:19px; color:var(--mid); }
+  .section-empty { display:none; font-size:13px; letter-spacing:0.1em; color:var(--mid); padding:20px 0; }
+  footer { background:linear-gradient(135deg,var(--td-purple),var(--td-darkblue),var(--td-black)); padding:40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
   .footer-logo { display:flex; align-items:center; text-decoration:none; }
-  .footer-copy { font-size:11px; letter-spacing:0.1em; color:rgba(255,255,255,0.35); text-transform:uppercase; }
+  .footer-copy { font-size:13px; letter-spacing:0.1em; color:rgba(255,255,255,0.75); text-transform:uppercase; }
   .footer-social { display:flex; align-items:center; gap:20px; }
-  .footer-social a { color:rgba(255,255,255,0.6); text-decoration:none; transition:color 0.2s; display:flex; align-items:center; }
-  .footer-social a:hover { color:var(--green-light); }
-  .footer-social svg { width:20px; height:20px; fill:currentColor; }
+  .footer-social a { color:rgba(255,255,255,0.8); text-decoration:none; transition:color 0.2s; display:flex; align-items:center; min-width:44px; min-height:44px; justify-content:center; }
+  .footer-social a:hover { color:var(--td-yellow); }
+  .footer-social svg { width:22px; height:22px; fill:currentColor; }
 
   @media (max-width:768px) {
-    .header-top { padding:12px 20px; } nav { padding:0 20px; }
-    .filter-bar { padding:12px 20px; top:65px; } .jump-links { display:none; }
+    .header-top { padding:12px 20px; }
+    .hamburger { display:flex; }
+    nav { display:none; padding:0; }
+    nav.open { display:block; }
+    nav ul { flex-direction:column; }
+    nav ul li { width:100%; }
+    nav ul li a { padding:14px 20px; font-size:14px; border-bottom:1px solid rgba(155,126,200,0.2); min-height:52px; }
+    .has-dropdown .dropdown { position:static; box-shadow:none; border:none; border-top:1px solid rgba(155,126,200,0.2); display:none; background:rgba(255,255,255,0.9); }
+    .has-dropdown.open .dropdown { display:block; }
+    .dropdown li a { padding:13px 20px 13px 36px; }
+    .filter-bar { padding:12px 20px; top:65px; }
+    .jump-links { display:none; }
     .shop-main { padding:0 20px 60px; }
     .product-grid { grid-template-columns:repeat(2,1fr); gap:20px 14px; }
     footer { padding:28px 20px; flex-direction:column; align-items:flex-start; }
   }
+  @media (max-width:380px) { .product-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
-
 <header>
   <div class="header-top">
-    <a href="index.html" class="header-logo"><img src="logo.png" alt="Made in Marin" style="height:42px;width:auto;" /></a>
-    <div class="header-actions"><a href="#" class="cart-icon">BAG 0</a></div>
+    <a href="/" class="header-logo" aria-label="Made in Marin Home"><img src="logo.png" alt="Made in Marin" width="140" height="42" loading="eager"></a>
+    <div class="header-right">
+      <a href="#" class="cart-icon" aria-label="Shopping bag, 0 items">BAG 0</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
+  <nav id="main-nav" aria-label="Main navigation">
+    <ul role="list">
+      <li><a href="/">Home</a></li>
       <li class="has-dropdown active">
-        <a href="#" onclick="return false;">Shop</a>
-        <ul class="dropdown">
+        <a href="shop-adults.html" aria-haspopup="true">Shop</a>
+        <ul class="dropdown" role="list">
           <li><a href="shop-adults.html">Adults</a></li>
           <li><a href="shop-kids.html">Kids &amp; Baby</a></li>
           <li><a href="shop-stickers.html">Stickers</a></li>
-          <li class="active"><a href="shop-tiedye.html">Tie Dye</a></li>
+          <li class="active"><a href="shop-tiedye.html" aria-current="page">Tie Dye</a></li>
         </ul>
       </li>
       <li><a href="events.html">Events</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="find-in-store.html">Find in Store</a></li>
-      <li class="has-dropdown"><a href="#" onclick="return false;">Food Finder</a></li>
+      <li class="has-dropdown"><a href="food-finder.html" aria-haspopup="true">Food Finder</a></li>
     </ul>
   </nav>
 </header>
-
 <main>
-  <div class="page-title">
-    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="#">Shop</a> &nbsp;/&nbsp; Tie Dye</p>
+  <div class="td-hero">
+    <p class="td-hero-breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="shop-adults.html">Shop</a> &nbsp;/&nbsp; Tie Dye</p>
     <h1>Tie Dye</h1>
+    <p class="td-hero-sub">Hand-dyed. One of a kind. Made in Marin.</p>
   </div>
-
-  <!-- STICKY FILTER BAR -->
-  <div class="filter-bar">
+  <div class="filter-bar" role="toolbar" aria-label="Filter and navigate products">
     <div class="filter-group">
       <span class="filter-label">Filter:</span>
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="tee">T-Shirts</button>
-      <button class="filter-btn" data-filter="hoodie">Hoodies</button>
-      <button class="filter-btn" data-filter="onesie">Onesies</button>
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="tee" aria-pressed="false">T-Shirts</button>
+      <button class="filter-btn" data-filter="hoodie" aria-pressed="false">Hoodies</button>
+      <button class="filter-btn" data-filter="onesie" aria-pressed="false">Onesies</button>
     </div>
-    <div class="jump-links">
+    <nav class="jump-links" aria-label="Jump to section">
       <a href="#section-baby" class="jump-link">Baby</a>
       <a href="#section-toddler" class="jump-link">Toddler</a>
       <a href="#section-kids" class="jump-link">Kids</a>
       <a href="#section-adults" class="jump-link">Adults</a>
-    </div>
+    </nav>
   </div>
-
   <div class="shop-main">
-
-    <!-- ═══ BABY ═══ -->
-    <div class="age-section" id="section-baby">
-      <div class="section-header">
-        <h2 class="section-title">Baby</h2>
-        <span class="section-count" id="baby-count"></span>
-      </div>
-      <div class="product-grid" id="baby-grid">
-
-        <a class="product-card" data-category="onesie" data-price="22" href="product-tiedye-baby-onesie.html">
-          <div class="product-img">
-            <img src="tiedye-baby-onesie-1.png" alt="Tie Dye Baby Onesie" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <span class="product-badge">New</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Baby Onesie</p>
-          <p class="product-name">Tie Dye Baby Onesie</p>
-          <p class="product-price">$22.00</p>
-        </a>
-
-        <a class="product-card" data-category="tee" data-price="20" href="product-tiedye-baby-tee.html">
-          <div class="product-img">
-            <img src="tiedye-baby-tee-1.png" alt="Tie Dye Baby Tee" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Baby T-Shirt</p>
-          <p class="product-name">Tie Dye Baby Tee</p>
-          <p class="product-price">$20.00</p>
-        </a>
-
-        <!-- ADD MORE BABY PRODUCTS HERE -->
-
+    <section class="age-section" id="section-baby" aria-labelledby="baby-heading">
+      <div class="section-header"><h2 class="section-title" id="baby-heading">Baby</h2><span class="section-count" id="baby-count"></span></div>
+      <div class="product-grid" id="baby-grid" role="list">
+        <a class="product-card" data-category="onesie" data-price="22" href="product-tiedye-baby-onesie.html" role="listitem" aria-label="Tie Dye Baby Onesie, $22.00"><div class="product-img"><img src="tiedye-baby-onesie-1.png" alt="Tie Dye Baby Onesie" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Baby Onesie</p><p class="product-name">Tie Dye Baby Onesie</p><p class="product-price">$22.00</p></a>
+        <a class="product-card" data-category="tee" data-price="20" href="product-tiedye-baby-tee.html" role="listitem" aria-label="Tie Dye Baby Tee, $20.00"><div class="product-img"><img src="tiedye-baby-tee-1.png" alt="Tie Dye Baby Tee" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Baby T-Shirt</p><p class="product-name">Tie Dye Baby Tee</p><p class="product-price">$20.00</p></a>
       </div>
       <p class="section-empty" id="baby-empty">No items match this filter.</p>
-    </div>
-
-    <!-- ═══ TODDLER ═══ -->
-    <div class="age-section" id="section-toddler">
-      <div class="section-header">
-        <h2 class="section-title">Toddler</h2>
-        <span class="section-count" id="toddler-count"></span>
-      </div>
-      <div class="product-grid" id="toddler-grid">
-
-        <a class="product-card" data-category="tee" data-price="24" href="product-tiedye-toddler-tee.html">
-          <div class="product-img">
-            <img src="tiedye-toddler-tee-1.png" alt="Tie Dye Toddler Tee" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <span class="product-badge">New</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Toddler T-Shirt</p>
-          <p class="product-name">Tie Dye Toddler Tee</p>
-          <p class="product-price">$24.00</p>
-        </a>
-
-        <a class="product-card" data-category="hoodie" data-price="42" href="product-tiedye-toddler-hoodie.html">
-          <div class="product-img">
-            <img src="tiedye-toddler-hoodie-1.png" alt="Tie Dye Toddler Hoodie" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Toddler Hoodie</p>
-          <p class="product-name">Tie Dye Toddler Hoodie</p>
-          <p class="product-price">$42.00</p>
-        </a>
-
-        <!-- ADD MORE TODDLER PRODUCTS HERE -->
-
+    </section>
+    <section class="age-section" id="section-toddler" aria-labelledby="toddler-heading">
+      <div class="section-header"><h2 class="section-title" id="toddler-heading">Toddler</h2><span class="section-count" id="toddler-count"></span></div>
+      <div class="product-grid" id="toddler-grid" role="list">
+        <a class="product-card" data-category="tee" data-price="24" href="product-tiedye-toddler-tee.html" role="listitem" aria-label="Tie Dye Toddler Tee, $24.00"><div class="product-img"><img src="tiedye-toddler-tee-1.png" alt="Tie Dye Toddler Tee" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Toddler T-Shirt</p><p class="product-name">Tie Dye Toddler Tee</p><p class="product-price">$24.00</p></a>
+        <a class="product-card" data-category="hoodie" data-price="42" href="product-tiedye-toddler-hoodie.html" role="listitem" aria-label="Tie Dye Toddler Hoodie, $42.00"><div class="product-img"><img src="tiedye-toddler-hoodie-1.png" alt="Tie Dye Toddler Hoodie" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Toddler Hoodie</p><p class="product-name">Tie Dye Toddler Hoodie</p><p class="product-price">$42.00</p></a>
       </div>
       <p class="section-empty" id="toddler-empty">No items match this filter.</p>
-    </div>
-
-    <!-- ═══ KIDS ═══ -->
-    <div class="age-section" id="section-kids">
-      <div class="section-header">
-        <h2 class="section-title">Kids</h2>
-        <span class="section-count" id="kids-count"></span>
-      </div>
-      <div class="product-grid" id="kids-grid">
-
-        <a class="product-card" data-category="tee" data-price="28" href="product-tiedye-kids-tee.html">
-          <div class="product-img">
-            <img src="tiedye-kids-tee-1.png" alt="Tie Dye Kids Tee" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <span class="product-badge">New</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Kids T-Shirt</p>
-          <p class="product-name">Tie Dye Kids Tee</p>
-          <p class="product-price">$28.00</p>
-        </a>
-
-        <a class="product-card" data-category="hoodie" data-price="48" href="product-tiedye-kids-hoodie.html">
-          <div class="product-img">
-            <img src="tiedye-kids-hoodie-1.png" alt="Tie Dye Kids Hoodie" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Kids Hoodie</p>
-          <p class="product-name">Tie Dye Kids Hoodie</p>
-          <p class="product-price">$48.00</p>
-        </a>
-
-        <!-- ADD MORE KIDS PRODUCTS HERE -->
-
+    </section>
+    <section class="age-section" id="section-kids" aria-labelledby="kids-heading">
+      <div class="section-header"><h2 class="section-title" id="kids-heading">Kids</h2><span class="section-count" id="kids-count"></span></div>
+      <div class="product-grid" id="kids-grid" role="list">
+        <a class="product-card" data-category="tee" data-price="28" href="product-tiedye-kids-tee.html" role="listitem" aria-label="Tie Dye Kids Tee, $28.00"><div class="product-img"><img src="tiedye-kids-tee-1.png" alt="Tie Dye Kids Tee" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Kids T-Shirt</p><p class="product-name">Tie Dye Kids Tee</p><p class="product-price">$28.00</p></a>
+        <a class="product-card" data-category="hoodie" data-price="48" href="product-tiedye-kids-hoodie.html" role="listitem" aria-label="Tie Dye Kids Hoodie, $48.00"><div class="product-img"><img src="tiedye-kids-hoodie-1.png" alt="Tie Dye Kids Hoodie" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Kids Hoodie</p><p class="product-name">Tie Dye Kids Hoodie</p><p class="product-price">$48.00</p></a>
       </div>
       <p class="section-empty" id="kids-empty">No items match this filter.</p>
-    </div>
-
-    <!-- ═══ ADULTS ═══ -->
-    <div class="age-section" id="section-adults">
-      <div class="section-header">
-        <h2 class="section-title">Adults</h2>
-        <span class="section-count" id="adults-count"></span>
-      </div>
-      <div class="product-grid" id="adults-grid">
-
-        <a class="product-card" data-category="tee" data-price="35" href="product-tiedye-adult-tee.html">
-          <div class="product-img">
-            <img src="tiedye-adult-tee-1.png" alt="Tie Dye Adult Tee" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <span class="product-badge">New</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Adult T-Shirt</p>
-          <p class="product-name">Tie Dye Adult Tee</p>
-          <p class="product-price">$35.00</p>
-        </a>
-
-        <a class="product-card" data-category="hoodie" data-price="65" href="product-tiedye-adult-hoodie.html">
-          <div class="product-img">
-            <img src="tiedye-adult-hoodie-1.png" alt="Tie Dye Adult Hoodie" onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;width:100%;height:100%;align-items:center;justify-content:center;'"/>
-            <span class="product-img-placeholder" style="display:none">Product Photo</span>
-            <div class="product-overlay"><span class="view-btn">View Product</span></div>
-          </div>
-          <p class="product-category">Adult Hoodie</p>
-          <p class="product-name">Tie Dye Adult Hoodie</p>
-          <p class="product-price">$65.00</p>
-        </a>
-
-        <!-- ADD MORE ADULT PRODUCTS HERE -->
-
+    </section>
+    <section class="age-section" id="section-adults" aria-labelledby="adults-heading">
+      <div class="section-header"><h2 class="section-title" id="adults-heading">Adults</h2><span class="section-count" id="adults-count"></span></div>
+      <div class="product-grid" id="adults-grid" role="list">
+        <a class="product-card" data-category="tee" data-price="35" href="product-tiedye-adult-tee.html" role="listitem" aria-label="Tie Dye Adult Tee, $35.00"><div class="product-img"><img src="tiedye-adult-tee-1.png" alt="Tie Dye Adult Tee" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Adult T-Shirt</p><p class="product-name">Tie Dye Adult Tee</p><p class="product-price">$35.00</p></a>
+        <a class="product-card" data-category="hoodie" data-price="65" href="product-tiedye-adult-hoodie.html" role="listitem" aria-label="Tie Dye Adult Hoodie, $65.00"><div class="product-img"><img src="tiedye-adult-hoodie-1.png" alt="Tie Dye Adult Hoodie" loading="lazy" width="400" height="533" onerror="this.style.display='none'"><span class="product-img-placeholder">Product Photo</span><div class="product-overlay"><span class="view-btn">View</span></div></div><p class="product-category">Adult Hoodie</p><p class="product-name">Tie Dye Adult Hoodie</p><p class="product-price">$65.00</p></a>
       </div>
       <p class="section-empty" id="adults-empty">No items match this filter.</p>
-    </div>
-
+    </section>
   </div>
 </main>
-
 <footer>
-  <a href="index.html" class="footer-logo"><img src="logo.png" alt="Made in Marin" style="height:32px;width:auto;filter:invert(1);" /></a>
-  <p class="footer-copy">© 2025 Made in Marin®</p>
-  <div class="footer-social">
-    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-    <a href="mailto:hello@madeinmarin.org" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+  <a href="/" class="footer-logo" aria-label="Made in Marin Home"><img src="logo.png" alt="Made in Marin" width="100" height="32" loading="lazy"></a>
+  <p class="footer-copy">&copy; 2025 Made in Marin&reg;</p>
+  <div class="footer-social" aria-label="Social media links">
+    <a href="https://instagram.com/madeinmarin" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a href="https://facebook.com/madeinmarin" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="mailto:hello@madeinmarin.org" aria-label="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
   </div>
 </footer>
-
 <script>
+  const hamburger = document.getElementById('hamburger');
+  const mainNav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mainNav.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', e => {
+      if (window.innerWidth <= 768) { e.preventDefault(); link.parentElement.classList.toggle('open'); }
+    });
+  });
   const sections = ['baby','toddler','kids','adults'];
-
   function updateCounts() {
     sections.forEach(age => {
-      const grid = document.getElementById(`${age}-grid`);
+      const grid = document.getElementById(age+'-grid');
       const visible = grid.querySelectorAll('.product-card:not(.hidden)').length;
-      document.getElementById(`${age}-count`).textContent = visible > 0 ? `${visible} item${visible !== 1 ? 's' : ''}` : '';
-      document.getElementById(`${age}-empty`).style.display = visible === 0 ? 'block' : 'none';
+      document.getElementById(age+'-count').textContent = visible > 0 ? visible+' item'+(visible!==1?'s':'') : '';
+      document.getElementById(age+'-empty').style.display = visible === 0 ? 'block' : 'none';
     });
   }
-
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
       const filter = btn.dataset.filter;
       document.querySelectorAll('.product-card').forEach(card => {
         card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
@@ -328,8 +256,6 @@
       updateCounts();
     });
   });
-
-  // Initialize counts
   updateCounts();
 </script>
 </body>
